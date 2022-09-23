@@ -1,8 +1,16 @@
 /*=============== STORY ===============*/
+
+.reverse {
+    order: 1 !important;
+}
+
 .story{
     &__container{
         row-gap: 7.5rem;
     }
+
+ 
+    
     &__title{
         font-size: var(--h1-font-size);
         margin-bottom: var(--mb-1);
@@ -13,6 +21,7 @@
     &__images{
         position: relative;
     }
+
     &__img,
     &__square{
         width: 250px;

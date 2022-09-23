@@ -9,11 +9,16 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
   <!--=============== FAVICON ===============-->
-  <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+  <link rel="shortcut icon" href="/assets/img/favicon.png" type="image/x-icon">
 
   <!--=============== BOXICONS ===============-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-  <link rel="stylesheet" href="css/styles.css">
+
+  <!--=============== SWIPER CSS ===============-->
+  <link rel="stylesheet" href="/css/swiper-bundle.min.css">
+
+  <!--=============== CSS ===============-->
+  <link rel="stylesheet" href="/css/styles.css">
   <title>Mendes-advocacia</title>
 </head>
 
@@ -22,7 +27,24 @@
   <!--==================== HEADER ====================-->
   <header class="header" id="header">
     <nav class="nav container">
-      <a href="#" class="nav__logo">
+      <a href="/pages/index.html" class="nav__logo">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink">
+          <g clip-path="url(#clip0_73_134)">
+            <rect width="20" height="20" fill="url(#pattern0)" />
+          </g>
+          <defs>
+            <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+              <use xlink:href="#image0_73_134" transform="scale(0.00925926)" />
+            </pattern>
+            <clipPath id="clip0_73_134">
+              <rect width="20" height="20" fill="white" />
+            </clipPath>
+            <image id="image0_73_134" width="108" height="108"
+              xlink:href="data:image/png;base64,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" />
+          </defs>
+        </svg>
+
         Mendes
       </a>
 
@@ -32,10 +54,10 @@
             <a href="#home" class="nav__link active-link">Home</a>
           </li>
           <li class="nav__item">
-            <a href="#featured" class="nav__link">Featured</a>
+            <a href="#sobre" class="nav__link">Sobre</a>
           </li>
           <li class="nav__item">
-            <a href="#products" class="nav__link">Products</a>
+            <a href="#areas" class="nav__link">Áreas</a>
           </li>
           <li class="nav__item">
             <a href="#new" class="nav__link">New</a>
@@ -69,13 +91,7 @@
     <!--==================== HOME ====================-->
     <section class="home" id="home">
       <div class="home__container container grid">
-        <div class="home__img-bg">
-          <img src="assets/img/perfil.png" alt="" class="home__img">
-
-          <div class="home__oab">
-            <span>Lucas Mendes</span>
-            <span>OAB: 1901722</span>
-          </div>
+        <div class="home__img-bg bg-area" id="image_home">
         </div>
 
         <div class="home__social">
@@ -91,13 +107,11 @@
         </div>
 
         <div class="home__data">
-          <h1 class="home__title">Leite de capivaris, <br> leite de mula manquis sem cabeça suco de cevadiss
-            Leite de capivaris <br>
-          </h1>
-          <!-- <p class="home__description">
-                  Latest arrival of the new imported watches of the B720 series, 
-                  with a modern and resistant design.
-              </p> -->
+          <h1 class="home__title">Direito Criminalista</h1>
+          <p class="home__description">
+            Latest arrival of the new imported watches of the B720 series, 
+            with a modern and resistant design.
+          </p>
 
           <div class="home__btns">
             <!-- <a href="#" class="button button--gray button--small">
@@ -111,40 +125,76 @@
     </section>
 
     <!--==================== STORY ====================-->
-    <section class="story section container">
+    <section class="story section container" id="sobre">
       <div class="story__container grid">
         <div class="story__data">
-          <h2 class="section__title story__section-title">
-            Our Story
-          </h2>
+          <!-- <h2 class="section__title story__section-title">
+            Nossa História
+          </h2> -->
 
           <h1 class="story__title">
-            Mussum Ipsum, cacilds vidis litro abertis. Suco de cevadiss
+            Mussum Ipsum cacilds
           </h1>
 
           <p class="story__description">
             Delegadis gente finis, bibendum egestas augue arcu ut est.Atirei o pau no gatis, per gatis num morreus.In
             elementis mé pra quem é amistosis quis leo.Tá deprimidis, eu conheço uma cachacis que pode alegrar.
+            Delegadis gente finis, bibendum egestas augue arcu ut est.Atirei o pau no gatis, per gatis num morreus.In
+            elementis mé pra quem é amistosis quis leo.Tá deprimidis, eu conheço uma cachacis que pode alegrar.
+            Delegadis gente finis, bibendum egestas augue arcu ut est.Atirei o pau no gatis, per gatis num morreus.In
+            elementis mé pra quem é amistosis quis leo.Tá deprimidis, eu conheço uma cachacis que pode alegrar.
           </p>
 
-          <a href="#" class="button button--small">Discover</a>
+          <a href="#" class="button button--small">Saiba Mais</a>
         </div>
 
         <div class="story__images">
-          <img src="assets/img/story.png" alt="" class="story__img">
+          <img src="/assets/img/story.png" alt="" class="story__img">
           <div class="story__square"></div>
         </div>
       </div>
     </section>
 
+        <!--==================== STORY ====================-->
+        <section class="story section container" id="sobre">
+          <div class="story__container grid">
+            <div class="story__data">
+              <!-- <h2 class="section__title story__section-title">
+                Nossa História
+              </h2> -->
+    
+              <h1 class="story__title">
+                Mussum Ipsum cacilds
+              </h1>
+    
+              <p class="story__description">
+                Delegadis gente finis, bibendum egestas augue arcu ut est.Atirei o pau no gatis, per gatis num morreus.In
+                elementis mé pra quem é amistosis quis leo.Tá deprimidis, eu conheço uma cachacis que pode alegrar.
+              </p>
+
+              <p class="story__description">
+                Delegadis gente finis, bibendum egestas augue arcu ut est.Atirei o pau no gatis, per gatis num morreus.In
+                elementis mé pra quem é amistosis quis leo.Tá deprimidis, eu conheço uma cachacis que pode alegrar.
+              </p>
+    
+              <a href="#" class="button button--small">Saiba Mais</a>
+            </div>
+    
+            <div class="story__images reverse">
+              <img src="/assets/img/story.png" alt="" class="story__img">
+              <div class="story__square"></div>
+            </div>
+          </div>
+        </section>
+
     <!--==================== AREAS ====================-->
-    <section class="products section container" id="products">
+    <section class="products section container" id="areas">
       <h2 class="section__title">
-          Areas
+        Areas
       </h2>
 
       <div class="products__container grid">
-        <article class="products__card">
+        <article class="products__card" onclick="changeIdArea(Civil)" id="Civil">
           <svg width="58" height="48" viewBox="0 0 58 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_2_603)">
               <path
@@ -165,11 +215,11 @@
               </clipPath>
             </defs>
           </svg>
-        
+
           <h3 class="products__title">Direito Civil</h3>
         </article>
-        
-        <article class="products__card">
+
+        <article class="products__card" onclick="changeIdArea(Família)" id="Família">
           <svg width="56" height="47" viewBox="0 0 56 47" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_2_608)">
               <path
@@ -190,12 +240,12 @@
               </clipPath>
             </defs>
           </svg>
-        
-        
+
+
           <h3 class="products__title">Direito da Família</h3>
         </article>
-        
-        <article class="products__card">
+
+        <article class="products__card" onclick="changeIdArea(Consumidor)" id="Consumidor">
           <svg width="49" height="40" viewBox="0 0 49 40" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M10.7516 14.1509C9.75108 13.8174 9.74149 13.2788 10.7707 12.9357L47.3542 0.741865C48.3681 0.404532 48.9488 0.971865 48.6652 1.9647L38.2117 38.5462C37.9242 39.5601 37.3396 39.5946 36.9102 38.6324L30.0217 23.1304L41.5217 7.79712L26.1884 19.2971L10.7516 14.1509Z"
@@ -204,12 +254,12 @@
               d="M0.751577 14.1509C-0.248923 13.8174 -0.258506 13.2788 0.770744 12.9357L37.3542 0.741865C38.3681 0.404532 38.9488 0.971865 38.6652 1.9647L28.2117 38.5462C27.9242 39.5601 27.3396 39.5946 26.9102 38.6324L20.0217 23.1304L31.5217 7.79712L16.1884 19.2971L0.751577 14.1509Z"
               fill="#23367C" />
           </svg>
-        
-        
+
+
           <h3 class="products__title">Direito do Consumidor</h3>
         </article>
-        
-        <article class="products__card">
+
+        <article class="products__card" onclick="changeIdArea(Trabalho)" id="Trabalho">
           <svg width="56" height="47" viewBox="0 0 56 47" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_2_634)">
               <path
@@ -230,12 +280,12 @@
               </clipPath>
             </defs>
           </svg>
-        
-        
+
+
           <h3 class="products__title">Direito do Trabalho</h3>
         </article>
-        
-        <article class="products__card">
+
+        <article class="products__card" onclick="changeIdArea(Criminal)" id="Criminal">
           <svg width="56" height="47" viewBox="0 0 56 47" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_2_614)">
               <path
@@ -256,12 +306,12 @@
               </clipPath>
             </defs>
           </svg>
-        
-        
+
+
           <h3 class="products__title">Direito Criminal</h3>
         </article>
-        
-        <article class="products__card">
+
+        <article class="products__card" onclick="changeIdArea(Tributario)" id="Tributario">
           <svg width="56" height="47" viewBox="0 0 56 47" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_2_620)">
               <path
@@ -282,16 +332,162 @@
               </clipPath>
             </defs>
           </svg>
-        
-        
-        
           <h3 class="products__title">Direito Tributario</h3>
         </article>
       </div>
-  </section>
+    </section>
+
+    <!--==================== NEWS ====================-->
+    <section class="new section container" id="new">
+      <h2 class="section__title">
+        Noticias
+      </h2>
+
+      <div class="new__container">
+        <div class="swiper new-swiper">
+          <div class="swiper-wrapper">
+            <article class="new__card swiper-slide">
+              <span class="new__tag">New</span>
+
+              <img src="/assets/img/new1.png" alt="" class="new__img">
+
+              <div class="new__data">
+                <h3 class="new__title">Direito cacilds</h3>
+                <span class="new__price">Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu
+                  levo!</span>
+              </div>
+
+              <button class="button new__button">SAIBA MAIS</button>
+            </article>
+
+            <article class="new__card swiper-slide">
+              <span class="new__tag">New</span>
+
+              <img src="/assets/img/new2.png" alt="" class="new__img">
+
+              <div class="new__data">
+                <h3 class="new__title">Direito cacilds</h3>
+                <span class="new__price">Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu
+                  levo!</span>
+              </div>
+
+              <button class="button new__button">SAIBA MAIS</button>
+            </article>
+
+            <article class="new__card swiper-slide">
+              <span class="new__tag">New</span>
+
+              <img src="/assets/img/new3.png" alt="" class="new__img">
+
+              <div class="new__data">
+                <h3 class="new__title">Direito cacilds</h3>
+                <span class="new__price">Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu
+                  levo!</span>
+              </div>
+
+              <button class="button new__button">SAIBA MAIS</button>
+            </article>
+
+            <article class="new__card swiper-slide">
+              <span class="new__tag">New</span>
+
+              <img src="/assets/img/new4.png" alt="" class="new__img">
+
+              <div class="new__data">
+                <h3 class="new__title">Direito cacilds</h3>
+                <span class="new__price">Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu
+                  levo!</span>
+              </div>
+
+              <button class="button new__button">SAIBA MAIS</button>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer section">
+      <div class="footer__container container grid">
+        <div class="footer__content">
+          <h3 class="footer__title">Endereço</h3>
+
+          <ul class="footer__list">
+            <li>Barra Funda, São Paulo</li>
+            <li>Av. Marquês de São Vicente, 230</li>
+            <li>Sala 420</li>
+          </ul>
+        </div>
+        <div class="footer__content">
+          <h3 class="footer__title">Sobre Nós</h3>
+
+          <ul class="footer__links">
+            <li>
+              <a href="#" class="footer__link">Centro de apoio</a>
+            </li>
+            <li>
+              <a href="#" class="footer__link">Suporte ao cliente</a>
+            </li>
+            <li>
+              <a href="#" class="footer__link">Sobre nós</a>
+            </li>
+            <li>
+              <a href="#" class="footer__link">Direito autoral</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__content">
+          <h3 class="footer__title">Área de Atuação</h3>
+
+          <ul class="footer__links">
+            <li>
+              <a href="#" class="footer__link">Direito Civil</a>
+            </li>
+            <li>
+              <a href="#" class="footer__link">Direito do Consumidor</a>
+            </li>
+            <li>
+              <a href="#" class="footer__link">Direito Criminal</a>
+            </li>
+            <li>
+              <a href="#" class="footer__link">Direito do Trabalho</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__content">
+          <h3 class="footer__title">Social</h3>
+
+          <ul class="footer__social">
+            <a href="https://www.facebook.com/" target="_blank" class="footer__social-link">
+              <i class='bx bxl-facebook'></i>
+            </a>
+
+            <a href="https://twitter.com/" target="_blank" class="footer__social-link">
+              <i class='bx bxl-twitter'></i>
+            </a>
+
+            <a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
+              <i class='bx bxl-instagram'></i>
+            </a>
+          </ul>
+        </div>
+      </div>
+
+      <span class="footer__copy">&#169; Mostweb, todos os direitos reservados</span>
+    </footer>
+
+    <!--=============== SCROLL UP ===============-->
+    <a href="#" class="scrollup" id="scroll-up">
+      <i class='bx bx-up-arrow-alt scrollup__icon'></i>
+    </a>
+
   </main>
 
-  <script src="js/main.js"></script>
+  <!--=============== SWIPER JS ===============-->
+  <script src="/js/swiper-bundle.min.js"></script>
+  <script src="/js/main.js"></script>
 </body>
 
 </html>

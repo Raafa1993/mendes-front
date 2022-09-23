@@ -5,7 +5,8 @@
   --header-height: 3.5rem;
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
-  --first-color: hsl(31, 100%, 70%);
+  --color-default: hsl(1, 39%, 52%);
+  --first-color: hsl(1, 39%, 52%);
   --button-color: hsl(0, 0%, 17%);
   --button-color-alt: hsl(0, 0%, 21%);
   --title-color: hsl(0, 0%, 15%);
@@ -104,7 +105,7 @@ button {
 /*=============== THEME ===============*/
 /*========== Variables Dark theme ==========*/
 body.dark-theme {
-  --first-color: hsl(31, 76%, 74%);
+  --first-color: hsl(1, 64%, 61%);
   --button-color: hsl(0, 0%, 24%);
   --button-color-alt: hsl(0, 0%, 28%);
   --title-color: hsl(0, 0%, 95%);
@@ -283,6 +284,11 @@ body.dark-theme {
   position: relative;
   row-gap: 2.5rem;
 }
+.home .bg-area {
+  background-image: url("/assets/img/justice2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .home__img {
   width: 240px;
 }
@@ -308,6 +314,38 @@ body.dark-theme {
   padding: 0.75rem;
   background-color: var(--button-color-alt);
   color: #fff;
+}
+.home__phone {
+  position: absolute;
+  bottom: 18%;
+  left: 6%;
+  transform: translate(-50%, -50%);
+  background-color: #FFFFFF;
+  box-shadow: 0 12px 32px hsla(0deg, 0%, 20%, 0.1);
+  border: 1px dashed var(--first-color);
+  border-radius: 4px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.home__phone .bxl-whatsapp {
+  font-size: 26px;
+}
+.home__phone .phone-number {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.home__phone .phone-number > h3 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-color-light);
+}
+.home__phone .phone-number > span {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-color-light);
 }
 .home__social {
   position: absolute;
@@ -449,6 +487,10 @@ body.dark-theme {
 }
 
 /*=============== STORY ===============*/
+.reverse {
+  order: 1 !important;
+}
+
 .story__container {
   row-gap: 7.5rem;
 }
@@ -620,7 +662,7 @@ body.dark-theme {
   position: relative;
   text-align: center;
   background-color: var(--container-color);
-  padding-top: 2rem;
+  padding: 0.875rem;
   border: 1px solid var(--border-color);
   overflow-y: hidden;
   transition: 0.3s;
@@ -628,7 +670,6 @@ body.dark-theme {
 .new__card:hover {
   background-color: var(--first-color);
   box-shadow: 0 12px 32px hsla(0deg, 0%, 20%, 0.1);
-  padding: 2rem 0 3rem 0;
 }
 .new__card:hover .new__tag {
   background-color: var(--button-color);
@@ -657,7 +698,6 @@ body.dark-theme {
   transition: 0.3s;
 }
 .new__img {
-  height: 215px;
   margin-bottom: var(--mb-1);
 }
 .new__title, .new__price {
@@ -675,8 +715,8 @@ body.dark-theme {
 }
 .new__button {
   font-size: var(--small-font-size);
-  transform: translateY(1rem);
-  opacity: 0;
+  transform: translateY(0.5rem);
+  padding: 0.875rem 2rem;
 }
 
 /*=============== NEWSLETTER ===============*/

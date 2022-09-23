@@ -1,3 +1,48 @@
+const dataArea = [
+    {
+      id: 1,
+      type: 'Criminal',
+      title: 'Direito Criminalista',
+      subTitle: 'Latest arrival of the new imported design.',
+      image: 'url(/assets/img/new4.png)',
+      content: [
+        {
+          id: 1,
+          title: 'Mussum Ipsum cacilds',
+          subTitle: 'Delegadis gente finis, bibendum egestas augue arcu ut est.',
+          image: 'imagem bacana1'
+        },
+        {
+          id: 2,
+          title: 'Mussum Ipsum cacilds',
+          subTitle: 'Delegadis gente finis, bibendum egestas augue arcu ut est.',
+          image: 'imagem bacana1'
+        },
+      ]
+    },
+    {
+      id: 2,
+      type: 'Civil',
+      title: 'Direito Civil',
+      subTitle: 'Latest arrival of the new imported design.',
+      image: 'url(/assets/img/justice2.png)',
+      content: [
+        {
+          id: 1,
+          title: 'Mussum Ipsum cacilds',
+          subTitle: 'Delegadis gente finis, bibendum egestas augue arcu ut est.',
+          image: 'imagem bacana1'
+        },
+        {
+          id: 2,
+          title: 'Mussum Ipsum cacilds',
+          subTitle: 'Delegadis gente finis, bibendum egestas augue arcu ut est.',
+          image: 'imagem bacana1'
+        },
+      ]
+    }
+  ]
+
 /*=============== SHOW MENU ===============*/
 const navMenu = document.getElementById('nav-menu'),
       navToggle = document.getElementById('nav-toggle'),
@@ -39,33 +84,33 @@ const scrollHeader = () =>{
 window.addEventListener('scroll', scrollHeader)
 
 /*=============== TESTIMONIAL SWIPER ===============*/
-// let testimonialSwiper = new Swiper(".testimonial-swiper", {
-//     spaceBetween: 30,
-//     loop: 'true',
+let testimonialSwiper = new Swiper(".testimonial-swiper", {
+    spaceBetween: 30,
+    loop: 'true',
 
-//     navigation: {
-//         nextEl: ".swiper-button-next",
-//         prevEl: ".swiper-button-prev",
-//     },
-// });
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});
 
 /*=============== NEW SWIPER ===============*/
-// let newSwiper = new Swiper(".new-swiper", {
-//     spaceBetween: 24,
-//     loop: 'true',
+let newSwiper = new Swiper(".new-swiper", {
+    spaceBetween: 24,
+    loop: 'true',
 
-//     breakpoints: {
-//         576: {
-//           slidesPerView: 2,
-//         },
-//         768: {
-//           slidesPerView: 3,
-//         },
-//         1024: {
-//           slidesPerView: 4,
-//         },
-//     },
-// });
+    breakpoints: {
+        576: {
+          slidesPerView: 2,
+        },
+        768: {
+          slidesPerView: 3,
+        },
+        1024: {
+          slidesPerView: 4,
+        },
+    },
+});
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 const sections = document.querySelectorAll('section[id]')
@@ -149,3 +194,79 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+// const btnId = document.getElementById("civil");
+// const btnArea = document.querySelectorAll('.products__card');
+
+function changeIdArea(e) {
+    const urlParams = new URLSearchParams(window.location.search);
+    const getUrlId = urlParams.get("id");
+
+    const currentUrlParams = window.location.href
+    console.log('currentUrlParams', currentUrlParams)
+
+    // if(!!getUrlId) {
+    //     const currentUrlParams = window.location.href
+    //     const getUrlParamsPartialOne = currentUrlParams.split('html')[0];
+    //     const newParams = `${getUrlParamsPartialOne + "html"}` + `${"?id=" + e.id + "&#home"}`
+    //     window.location.href = newParams
+
+    //     // return console.log("ISID", newParams)
+    // } else {
+    //     const currentUrlParams = window.location.href
+    //     const getUrlParamsPartialOne = currentUrlParams.split('html')[0];
+    //     const newParams = `${getUrlParamsPartialOne + "html"}` + `${"?id=" + e.id + "&#home"}`
+    //     window.location.href = newParams
+    // }
+}
+
+// const parametros = new urlParams(location.search)
+
+// function ativarArea(parametro) {
+//   const elemento = document.getElementById('products__card')
+//   console.log(elemento);
+// }
+
+// parametros.forEach(ativarArea)
+
+initListItem = () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const newParams = urlParams.get("id");
+
+
+    const filter = dataArea.filter((obj) => obj.type === newParams)[0]
+    
+    console.log("PARAMS", newParams)
+    console.log("dataArea", filter)
+
+    const homeImage = document.getElementById("image_home");
+    const homeTitle = document.querySelector(".home__title");
+    console.log("home", homeTitle.innerHTML)
+
+    homeImage.style.backgroundImage = filter.image
+    homeTitle.innerHTML = filter.title
+    // home.style.border = "1px solid red"
+
+  
+    var productInfo = document.getElementsByClassName("infoProduct");
+      productInfo[0].innerHTML +=
+        `
+        <span class="titleProduto">Seguro Aparelho Eletrônico para: <h2 class="descriptionProduct">Notebook</h2></span>
+        <span class="coberturaSelecionada">Cobertura selecionada: <h2 class="coberturaValor">`+'R$: ' + newParams +`</h2></span>
+      
+        <div class="separator"></div>
+    
+        <div class="sectionCenterinfo">
+          <h3 class="conditionProduction">Valor do seguro:</h3>
+          <span class="valorProduct"><span class="valorProd">`+result[1]+'x de'+`</span> ` +
+          result[0] +
+          `</span>
+          <h4 class="debitoProduct">Via débito em conta ou cartão de crédito.</h4>
+          <h5 class="validadeSeguro">Validade do seguro: <b>12 meses</b></h5>
+        </div>
+    
+        <span class="tipoProtecao">Seu notebook estará protegido contra:</span>
+      `;
+  };
+  
+  initListItem();

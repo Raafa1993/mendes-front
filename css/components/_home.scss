@@ -6,6 +6,13 @@
         position: relative;
         row-gap: 2.5rem;
     }
+
+    .bg-area {
+        background-image: url('/assets/img/justice2.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
     &__img{
         width: 240px;
 
@@ -37,6 +44,46 @@
         
         color: #fff;
     }
+
+    &__phone {
+        position: absolute;
+        bottom: 18%;
+        left: 6%;
+        transform: translate(-50%, -50%);
+
+        background-color: #FFFFFF;
+        box-shadow: 0 12px 32px hsla(0, 0%, 20%, .1);
+        border: 1px dashed var(--first-color);
+        border-radius: 4px;
+        padding: 8px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        .bxl-whatsapp {
+            font-size: 26px;
+        }
+
+        .phone-number {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+
+            >h3 {
+                font-size: 0.875rem;
+                font-weight: 600;
+                color: var(--text-color-light);
+            }
+
+            >span {
+                font-size: 0.875rem;
+                font-weight: 600;
+                color: var(--text-color-light);
+            }
+        }
+    }
+    
+
     &__social{
         position: absolute;
         top: 35%;
