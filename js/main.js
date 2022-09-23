@@ -4,7 +4,7 @@ const dataArea = [
       type: 'Criminal',
       title: 'Direito Criminalista',
       subTitle: 'Latest arrival of the new imported design.',
-      image: 'url(/assets/img/new4.png)',
+      image: 'url(assets/img/new4.png)',
       content: [
         {
           id: 1,
@@ -25,7 +25,7 @@ const dataArea = [
       type: 'Civil',
       title: 'Direito Civil',
       subTitle: 'Latest arrival of the new imported design.',
-      image: 'url(/assets/img/justice2.png)',
+      image: 'url(assets/img/justice2.png)',
       content: [
         {
           id: 1,
