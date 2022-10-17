@@ -37,6 +37,7 @@
   --mb-2: 2rem;
   --mb-2-5: 2.5rem;
   --mb-3: 3rem;
+  --mb-4: 14px;
   /*========== z index ==========*/
   --z-tooltip: 10;
   --z-fixed: 100;
@@ -320,14 +321,22 @@ body.dark-theme {
   bottom: 18%;
   left: 6%;
   transform: translate(-50%, -50%);
-  background-color: #FFFFFF;
+  background-color: #008942;
   box-shadow: 0 12px 32px hsla(0deg, 0%, 20%, 0.1);
-  border: 1px dashed var(--first-color);
+  border: 1px solid #fff;
   border-radius: 4px;
   padding: 8px;
   display: flex;
   align-items: center;
   gap: 8px;
+}
+.home__phone .button__zap {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #00BD67;
+  border-radius: 50%;
 }
 .home__phone .bxl-whatsapp {
   font-size: 26px;
@@ -340,12 +349,52 @@ body.dark-theme {
 .home__phone .phone-number > h3 {
   font-size: 0.875rem;
   font-weight: 600;
-  color: var(--text-color-light);
+  color: #fff;
 }
 .home__phone .phone-number > span {
   font-size: 0.875rem;
   font-weight: 600;
-  color: var(--text-color-light);
+  color: #fff;
+}
+.home__tel {
+  position: absolute;
+  bottom: 18%;
+  left: 6%;
+  transform: translate(200%, 50%);
+  background-color: #6D0707;
+  box-shadow: 0 12px 32px hsla(0deg, 0%, 20%, 0.1);
+  border: 1px solid #fff;
+  border-radius: 4px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.home__tel .button__tel {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #B45655;
+  border-radius: 50%;
+}
+.home__tel .bxl-whatsapp {
+  font-size: 26px;
+}
+.home__tel .phone-number {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.home__tel .phone-number > h3 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #fff;
+}
+.home__tel .phone-number > span {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #fff;
 }
 .home__social {
   position: absolute;
@@ -365,7 +414,7 @@ body.dark-theme {
   color: var(--title-color);
 }
 .home__title {
-  font-size: var(--biggest-font-size);
+  font-size: var(--h2-font-size);
   font-weight: var(--font-bold);
   margin-bottom: var(--mb-1);
 }
@@ -495,11 +544,24 @@ body.dark-theme {
   row-gap: 7.5rem;
 }
 .story__title {
-  font-size: var(--h1-font-size);
+  font-size: var(--h3-font-size);
   margin-bottom: var(--mb-1);
 }
 .story__description {
   margin-bottom: var(--mb-2-5);
+}
+.story__storySpecial {
+  margin-bottom: var(--mb-4);
+  position: relative;
+}
+.story__storySpecial::after {
+  content: "";
+  position: absolute;
+  left: -24px;
+  top: 4px;
+  width: 12px;
+  height: 8px;
+  background-color: hsl(1deg, 39%, 52%);
 }
 .story__images {
   position: relative;
@@ -549,7 +611,6 @@ body.dark-theme {
 }
 .products__title {
   text-transform: uppercase;
-  margin-bottom: var(--mb-0-5);
 }
 .products__price {
   color: var(--first-color);
